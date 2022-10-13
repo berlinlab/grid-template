@@ -1,0 +1,130 @@
+
+/************************************************************************************/
+
+body {
+    /* wir haben drei Subelemente: header + main + footer, die sind jetzt unabhängig vom Inhalt angehängt */
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+* {
+    /* für alle Elemente Abstände sind abgeschafft */
+    padding: 0;
+    margin: 0;
+}
+
+/************************************************************************************/
+
+.site-header { /* header */
+    background-color: #404040; /* Hintergrund für das gesamte Subelement */
+    color: #ffffff; /* Textfarbe */
+    /* Header-Sticky und Schatten */
+    box-shadow: 0 0 10px 1px #404040;
+    position: -webkit-sticky; /* für Safari */
+    position: sticky; /* für andere Browsers */
+    top: 0; /* wird oben angehängt */
+    /* wir haben zwei Subelemente: ...logo + ...nav */
+    display: grid;
+    grid-template-columns: auto 350px 1fr auto;
+    grid-template-rows: 100px;
+    grid-template-areas: ". site-header-logo site-header-nav .";
+}
+
+.site-header-logo {
+    grid-area: site-header-logo; /* benannter Platz */
+    /* Zentrieren des Inhalts */
+    justify-self: center;
+    align-self: center;
+}
+
+.site-header-nav {
+    grid-area: site-header-nav; /* benannter Platz */
+    /* Zentrieren des Inhalts */
+    justify-self: center;
+    align-self: center;
+}
+
+.site-header-nav-buttons {
+    /* wir haben n-Subelemente für gebautes mit dem ul-Tag Menü */
+    display: grid;
+    grid-template-columns: repeat(5, 125px);
+    grid-template-rows: 100px;
+    /* Zentrieren des Inhalts */
+    justify-items: center;
+    align-items: center;
+}
+
+.site-header-nav-buttons > li {
+    list-style-type: none; /* Typ der Liste */
+}
+
+.site-header-nav-buttons li > a {
+    color: #ffffff; /* Textfarbe */
+    text-decoration: none; /* Keine Styles für den Text */
+}
+
+.site-header-nav-buttons > li > a:hover, a:focus, a:active {
+    background-color: aqua;
+}
+
+/************************************************************************************/
+
+.site-content { /* main */
+    background-color: #efefef; /* Hintergrund für das gesamte Subelement */
+    /* wir haben drei Subelemente: ...address + ...title + ...text, zwei erste haben automatische Höhe und der dritte hat den Rest */
+    display: grid;
+    grid-template-columns: auto minmax(800px, 1000px) auto;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: ". site-content-address ." ". site-content-title ." ". site-content-text .";
+}
+
+.site-content-address {
+    grid-area: site-content-address; /* benannter Platz */
+    background-color: #939393; /* Hintergrund für das gesamte Subelement */
+    margin-top: 25px; /* der äußere Abstand oben */
+    /* innere Abstände */
+    padding: 10px 25px 10px 25px;
+}
+
+.site-content-title {
+    grid-area: site-content-title; /* benannter Platz */
+    background-color: #e6e6e6; /* Hintergrund für das gesamte Subelement */
+    /* innere Abstände */
+    padding: 25px;
+}
+
+.site-content-text {
+    grid-area: site-content-text; /* benannter Platz */
+    background-color: #ffffff; /* Hintergrund für das gesamte Subelement */
+    margin-bottom: 25px; /* der äußere Abstand unten */
+    /* innere Abstände */
+    padding: 25px;
+}
+
+.site-content-text > p {
+
+}
+
+/************************************************************************************/
+
+.site-footer { /* footer */
+    background-color: #808080; /* Hintergrund für das gesamte Subelement */
+    /* wir haben zwei Subelemente: ...description + ...copyright */
+    display: grid;
+    grid-template-columns: auto minmax(800px, 1000px) auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". site-footer-description ." ". site-footer-copyright .";
+    /* innere Abstände */
+    padding: 25px;
+}
+
+.site-footer-description {
+    grid-area: site-footer-description; /* benannter Platz */
+}
+
+.site-footer-copyright {
+    grid-area: site-footer-copyright; /* benannter Platz */
+}
+
+/************************************************************************************/
