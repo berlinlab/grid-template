@@ -2,6 +2,10 @@
 /************************************************************************************/
 
 body {
+    /* Standardschrift, -größe und -farbe */
+    font-family: Serif, Arial, Helvetica, Verdana;
+    font-size: 1.2rem;
+    color: #000000;
     /* wir haben drei Subelemente: header + main + footer, die sind jetzt unabhängig vom Inhalt angehängt */
     height: 100vh;
     display: grid;
@@ -36,6 +40,8 @@ body {
     /* Zentrieren des Inhalts */
     justify-self: center;
     align-self: center;
+    /* Verschiedene Charakteristika von Text */
+    font-family: "Bookman Old Style";
 }
 
 .site-header-nav {
@@ -59,13 +65,14 @@ body {
     list-style-type: none; /* Typ der Liste */
 }
 
-.site-header-nav-buttons li > a {
+.site-header-nav-buttons li > a, a:link, a:visited {
     color: #ffffff; /* Textfarbe */
     text-decoration: none; /* Keine Styles für den Text */
+    padding: 37px; /* Abstände */
 }
 
 .site-header-nav-buttons > li > a:hover, a:focus, a:active {
-    background-color: aqua;
+    background-color: #505050; /* Hintergrundfarbe */
 }
 
 /************************************************************************************/
@@ -85,6 +92,9 @@ body {
     margin-top: 25px; /* der äußere Abstand oben */
     /* innere Abstände */
     padding: 10px 25px 10px 25px;
+    /* Verschiedene Charakteristika von Text */
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 .site-content-title {
@@ -103,7 +113,8 @@ body {
 }
 
 .site-content-text > p {
-
+    text-align: justify;
+    padding-bottom: 10px;
 }
 
 /************************************************************************************/
@@ -117,14 +128,21 @@ body {
     grid-template-areas: ". site-footer-description ." ". site-footer-copyright .";
     /* innere Abstände */
     padding: 25px;
+    /* Verschiedene Charakteristika von Text */
+    font-size: 1rem;
+    color: #bbbbbb;
 }
 
 .site-footer-description {
     grid-area: site-footer-description; /* benannter Platz */
+    /* Verschiedene Charakteristika von Text */
+    text-align: justify;
 }
 
 .site-footer-copyright {
     grid-area: site-footer-copyright; /* benannter Platz */
+    /* Verschiedene Charakteristika von Text */
+    text-align: center;
 }
 
 /************************************************************************************/
