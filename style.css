@@ -61,17 +61,24 @@ body {
     align-items: center;
 }
 
-.site-header-nav-buttons > li {
+.site-header-nav-buttons li {
     list-style-type: none; /* Typ der Liste */
+    text-align: center;
 }
 
-.site-header-nav-buttons li > a, a:link, a:visited {
+.site-header-nav-buttons li > a, li > a:link, li > a:visited {
     color: #ffffff; /* Textfarbe */
     text-decoration: none; /* Keine Styles für den Text */
-    padding: 37px; /* Abstände */
+    /* Block -> Flex */
+    height: 100px; /* Höhe */
+    width: 125px; /* Breite */
+    display: flex; /* Bloctyp */
+    flex-direction: column; /* Richtung im Block */
+    justify-content: center; /* Ausrichtung vertikal */
+    flex-wrap: wrap; /* Zeilenumbrüche */
 }
 
-.site-header-nav-buttons > li > a:hover, a:focus, a:active {
+.site-header-nav-buttons li > a:hover, li > a:focus, li > a:active {
     background-color: #505050; /* Hintergrundfarbe */
 }
 
@@ -113,8 +120,49 @@ body {
 }
 
 .site-content-text > p {
-    text-align: justify;
-    padding-bottom: 10px;
+    text-align: justify; /* Textausrichtung */
+    padding-bottom: 10px; /* Abstand unten */
+}
+
+.site-content-text p > a, p > a:link, p > a:visited {
+    border: 1px solid #ffffff; /* Border */
+    padding: 3px 10px; /* Abstand */
+    background-color: #c3c3c3; /* Hintergrundfarbe */
+    color: #ffffff; /* Textfarbe */
+    text-decoration: none; /* Keine Styles für den Text */
+}
+
+.site-content-text p > a:hover, p > a:focus, p > a:active {
+    border: 1px solid #ffffff; /* Border */
+    padding: 3px 10px; /* Abstand */
+    background-color: #a8a8a8; /* Hintergrundfarbe */
+    color: #ffffff; /* Textfarbe */
+    text-decoration: none; /* Keine Styles für den Text */
+}
+
+.site-content-text p > a:after {
+    content: " \29C9";
+}
+
+.site-content-text > table {
+    width: 100%; /* Breite einer Tabelle */
+    border-collapse: collapse; /* Abstand zwischen Zeilen */
+}
+
+.site-content-text tr > th {
+    padding: 10px; /* Abstand */
+    background-color: #a1a1a1; /* Hintergrund */
+    color: #ffffff; /* Textfarbe */
+}
+
+.site-content-text tr > td {
+    border-bottom: 1px solid #ddd; /* Border */
+    padding: 10px; /* Abstand */
+}
+
+.site-content-text tr:hover {
+    background-color: #c9c9c9; /* Hintergrundfarbe */
+    color: #ffffff; /* Textfarbe */
 }
 
 /************************************************************************************/
