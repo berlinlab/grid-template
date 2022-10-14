@@ -119,66 +119,84 @@ body {
     padding: 25px;
 }
 
-.site-content-text > p {
+/*-------------START-CONTENT-------------*/
+
+/* Paragraph */
+.site-content-text p {
     text-align: justify; /* Textausrichtung */
     padding-bottom: 10px; /* Abstand unten */
 }
 
-.site-content-text p > a, p > a:link, p > a:visited {
-    border: 1px solid #ffffff; /* Border */
-    padding: 3px 10px; /* Abstand */
-    background-color: #c3c3c3; /* Hintergrundfarbe */
-    color: #ffffff; /* Textfarbe */
+/* Bilder */
+.site-content-text img {
+    max-width: 98.7%; /* Maximale Breite */
+    height: auto; /* Automatische Höhe */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 4px; /* Gerundete Border-Ecken */
+    padding: 5px; /* Abstände */
+}
+
+/* Figure für Bilder */
+.site-content-text figure {
+    text-align: center; /* Textausrichtung */
+    padding: 5px 0 10px 0;
+}
+
+/* Bilder im Tag <p> - Paragraph */
+.site-content-text p > img {
+    max-width: 35%; /* Maximale Breite */
+    height: auto; /* Automatische Höhe */
+    /* Standard-Parameter für Schweben */
+    float: left;
+    margin: 15px 15px 0 0;
+}
+
+/* Link per Bild innerhalb und außerhalb Paragraph */
+.site-content-text p > a > img {
+    background-color: #e6e6e6; /* Hintergrundfarbe */
+    max-width: 35%; /* Maximale Breite */
+    height: auto; /* Automatische Höhe */
+}
+
+.site-content-text a > img {
+    background-color: #e6e6e6; /* Hintergrundfarbe */
+}
+
+.site-content-text p > a > img:hover, a > img:hover {
+    background-color: #b7b7b7; /* Hintergrundfarbe */
+}
+
+/* Link im Paragraph */
+.site-content-text p > a {
+    background-color: #dfdfdf; /* Hintergrundfarbe */
+    color: #000000; /* Textfarbe */
     text-decoration: none; /* Keine Styles für den Text */
 }
 
-.site-content-text p > a:hover, p > a:focus, p > a:active {
+.site-content-text p > a.link {
     border: 1px solid #ffffff; /* Border */
-    padding: 3px 10px; /* Abstand */
-    background-color: #a8a8a8; /* Hintergrundfarbe */
-    color: #ffffff; /* Textfarbe */
-    text-decoration: none; /* Keine Styles für den Text */
+    padding: 3px 5px; /* Abstand */
 }
 
-.site-content-text p > a:after {
-    content: " \2BB5";
+.site-content-text p > a.link:after {
+    content: " \29C9";
 }
 
-.site-content-text > img, a > img {
-    max-width: 99%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    margin: 10px 0 15px 0;
-}
-
-.site-content-text p > img, p > a > img {
-    max-width: 35%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-.site-content-text a > img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
+/* Style für eine Tabelle */
 .site-content-text > table {
     width: 100%; /* Breite einer Tabelle */
     border-collapse: collapse; /* Abstand zwischen Zeilen */
 }
 
 .site-content-text tr > th {
-    padding: 10px; /* Abstand */
+    padding: 5px; /* Abstand */
     background-color: #a1a1a1; /* Hintergrund */
     color: #ffffff; /* Textfarbe */
 }
 
 .site-content-text tr > td {
     border-bottom: 1px solid #ddd; /* Border */
-    padding: 10px; /* Abstand */
+    padding: 7px; /* Abstand */
     font-size: 1rem;
 }
 
@@ -203,15 +221,32 @@ body {
     text-decoration: none; /* Keine Styles für den Text */
 }
 
+/* Style für ein Formular */
+.site-content-text form {
+    padding: 5px 0 15px 0; /* Abstand */
+}
+
+.site-content-text fieldset {
+    padding: 10px; /* Abstand */
+    border: 0 #ffffff; /* Border */
+}
+
+.site-content-text input {
+    padding: 5px;
+    font-size: 1rem;
+}
+
 /* Textausrichtung */
 .center { text-align: center; }
 .right { text-align: right; }
 .left { text-align: left; }
 .justify { text-align: justify; }
 
-/* Textausrichtung */
-.float-left { float: left; margin: 15px 15px 0 0; }
+/* Schweben von Fotos */
+/*.float-left { float: left; margin: 15px 15px 0 0; }*/
 .float-right { float: right; margin: 15px 0 0 15px; }
+
+/*-------------END-CONTENT-------------*/
 
 /************************************************************************************/
 
@@ -240,5 +275,9 @@ body {
     /* Verschiedene Charakteristika von Text */
     text-align: center;
 }
+
+/*-------------START-CONTENT-------------*/
+
+/*-------------END-CONTENT-------------*/
 
 /************************************************************************************/
