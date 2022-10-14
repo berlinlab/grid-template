@@ -30,7 +30,7 @@ body {
     top: 0; /* wird oben angehängt */
     /* wir haben zwei Subelemente: ...logo + ...nav */
     display: grid;
-    grid-template-columns: auto 350px 1fr auto;
+    grid-template-columns: auto minmax(250px, 350px) 1fr auto;
     grid-template-rows: 100px;
     grid-template-areas: ". site-header-logo site-header-nav .";
 }
@@ -141,7 +141,28 @@ body {
 }
 
 .site-content-text p > a:after {
-    content: " \29C9";
+    content: " \2BB5";
+}
+
+.site-content-text > img, a > img {
+    max-width: 99%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px 0 15px 0;
+}
+
+.site-content-text p > img, p > a > img {
+    max-width: 35%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.site-content-text a > img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 .site-content-text > table {
@@ -158,12 +179,39 @@ body {
 .site-content-text tr > td {
     border-bottom: 1px solid #ddd; /* Border */
     padding: 10px; /* Abstand */
+    font-size: 1rem;
 }
 
 .site-content-text tr:hover {
     background-color: #c9c9c9; /* Hintergrundfarbe */
     color: #ffffff; /* Textfarbe */
 }
+
+.site-content-text td > a, td > a:link, td > a:visited {
+    border: 1px solid #ffffff; /* Border */
+    padding: 3px 10px; /* Abstand */
+    background-color: #c3c3c3; /* Hintergrundfarbe */
+    color: #ffffff; /* Textfarbe */
+    text-decoration: none; /* Keine Styles für den Text */
+}
+
+.site-content-text td > a:hover, td > a:focus, td > a:active {
+    border: 1px solid #ffffff; /* Border */
+    padding: 3px 10px; /* Abstand */
+    background-color: #a8a8a8; /* Hintergrundfarbe */
+    color: #ffffff; /* Textfarbe */
+    text-decoration: none; /* Keine Styles für den Text */
+}
+
+/* Textausrichtung */
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+.justify { text-align: justify; }
+
+/* Textausrichtung */
+.float-left { float: left; margin: 15px 15px 0 0; }
+.float-right { float: right; margin: 15px 0 0 15px; }
 
 /************************************************************************************/
 
