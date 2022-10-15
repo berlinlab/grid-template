@@ -274,12 +274,13 @@ body {
     grid-area: site-footer-copyright; /* benannter Platz */
     /* Verschiedene Charakteristika von Text */
     text-align: center;
+    color: #3e3838;
 }
 
 /*-------------START-CONTENT-------------*/
 
 .site-footer a, a:link, a:visited {
-    color: #000000;
+    color: #212121;
 }
 
 .site-footer a:hover, a:focus, a:active {
