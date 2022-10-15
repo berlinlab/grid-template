@@ -278,6 +278,18 @@ body {
 
 /*-------------START-CONTENT-------------*/
 
+.site-footer a, a:link, a:visited {
+    color: #000000;
+}
+
+.site-footer a:hover, a:focus, a:active {
+    color: #ffffff;
+}
+
+/*.site-footer a:after {*/
+/*    content: " \29C9";*/
+/*}*/
+
 /*-------------END-CONTENT-------------*/
 
 /************************************************************************************/
